@@ -258,7 +258,6 @@ interface IAppConfig {
   siderWidth: number
   appTheme: AppTheme
   customTheme?: string
-  autoCheckUpdate: boolean
   silentStart: boolean
   autoCloseConnection: boolean
   sysProxy: ISysProxyConfig
