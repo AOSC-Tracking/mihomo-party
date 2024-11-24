@@ -2,7 +2,6 @@ import { Button, Tooltip } from '@heroui/react'
 import SettingCard from '../base/base-setting-card'
 import SettingItem from '../base/base-setting-item'
 import {
-  checkUpdate,
   createHeapSnapshot,
   quitApp,
   quitWithoutCore,
@@ -35,33 +34,6 @@ const Actions: React.FC = () => {
         <SettingItem title={t('actions.guide.title')} divider>
           <Button size="sm" onPress={() => getDriver()?.drive()}>
             {t('actions.guide.button')}
-          </Button>
-        </SettingItem>
-        <SettingItem title={t('actions.update.title')} divider>
-          <Button
-            size="sm"
-            isLoading={checkingUpdate}
-            onPress={async () => {
-              try {
-                setCheckingUpdate(true)
-                const version = await checkUpdate()
-                if (version) {
-                  setNewVersion(version.version)
-                  setChangelog(version.changelog)
-                  setOpenUpdate(true)
-                } else {
-                  new window.Notification(t('actions.update.upToDate.title'), { 
-                    body: t('actions.update.upToDate.body') 
-                  })
-                }
-              } catch (e) {
-                alert(e)
-              } finally {
-                setCheckingUpdate(false)
-              }
-            }}
-          >
-            {t('actions.update.button')}
           </Button>
         </SettingItem>
         <SettingItem

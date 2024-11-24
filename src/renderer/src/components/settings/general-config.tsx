@@ -53,7 +53,6 @@ const GeneralConfig: React.FC = () => {
     autoQuitWithoutCoreDelay = 60,
     customTheme = 'default.css',
     envType = [platform === 'win32' ? 'powershell' : 'bash'],
-    autoCheckUpdate,
     appTheme = 'system',
     language = 'zh-CN'
   } = appConfig || {}
@@ -111,15 +110,6 @@ const GeneralConfig: React.FC = () => {
               } finally {
                 mutateEnable()
               }
-            }}
-          />
-        </SettingItem>
-        <SettingItem title={t('settings.autoCheckUpdate')} divider>
-          <Switch
-            size="sm"
-            isSelected={autoCheckUpdate}
-            onValueChange={(v) => {
-              patchAppConfig({ autoCheckUpdate: v })
             }}
           />
         </SettingItem>
