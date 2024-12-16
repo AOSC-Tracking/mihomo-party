@@ -19,8 +19,7 @@ import InterfaceModal from '@renderer/components/mihomo/interface-modal'
 import { MdDeleteForever } from 'react-icons/md'
 
 const CoreMap = {
-  mihomo: '稳定版',
-  'mihomo-alpha': '预览版'
+  mihomo: '稳定版'
 }
 
 const Mihomo: React.FC = () => {
@@ -127,7 +126,6 @@ const Mihomo: React.FC = () => {
               }}
             >
               <SelectItem key="mihomo">{CoreMap['mihomo']}</SelectItem>
-              <SelectItem key="mihomo-alpha">{CoreMap['mihomo-alpha']}</SelectItem>
             </Select>
           </SettingItem>
           <SettingItem title="混合端口" divider>
