@@ -58,7 +58,8 @@ export function themesDir(): string {
 }
 
 export function mihomoCoreDir(): string {
-  return path.join(resourcesDir(), 'sidecar')
+  const isLinux = process.platform === 'linux'
+  return isLinux ? '/usr/bin' : path.join(resourcesDir(), 'sidecar')
 }
 
 export function mihomoCorePath(core: string): string {
