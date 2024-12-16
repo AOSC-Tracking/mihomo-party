@@ -94,39 +94,6 @@ const Mihomo: React.FC = () => {
         <SettingCard>
           <SettingItem
             title={t('mihomo.coreVersion')}
-            actions={
-              <Button
-                size="sm"
-                isIconOnly
-                title={t('mihomo.upgradeCore')}
-                variant="light"
-                isLoading={upgrading}
-                onPress={async () => {
-                  try {
-                    setUpgrading(true)
-                    await mihomoUpgrade()
-                    setTimeout(() => {
-                      PubSub.publish('mihomo-core-changed')
-                    }, 2000)
-                    if (platform !== 'win32') {
-                      new Notification(t('mihomo.coreAuthLost'), {
-                        body: t('mihomo.coreUpgradeSuccess')
-                      })
-                    }
-                  } catch (e) {
-                    if (typeof e === 'string' && e.includes('already using latest version')) {
-                      new Notification(t('mihomo.alreadyLatestVersion'))
-                    } else {
-                      alert(e)
-                    }
-                  } finally {
-                    setUpgrading(false)
-                  }
-                }}
-              >
-                <IoMdCloudDownload className="text-lg" />
-              </Button>
-            }
             divider
           >
             <Select
