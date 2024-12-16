@@ -21,13 +21,12 @@ import { useTranslation } from 'react-i18next'
 
 const CoreMap = {
   mihomo: 'mihomo.stableVersion',
-  'mihomo-alpha': 'mihomo.alphaVersion'
 }
 
 const Mihomo: React.FC = () => {
   const { t } = useTranslation()
   const { appConfig, patchAppConfig } = useAppConfig()
-  const { 
+  const {
     core = 'mihomo',
     maxLogDays = 7,
     sysProxy,
@@ -141,7 +140,6 @@ const Mihomo: React.FC = () => {
               }}
             >
               <SelectItem key="mihomo">{t(CoreMap['mihomo'])}</SelectItem>
-              <SelectItem key="mihomo-alpha">{t(CoreMap['mihomo-alpha'])}</SelectItem>
             </Select>
           </SettingItem>
           <SettingItem title={t('mihomo.mixedPort')} divider>
