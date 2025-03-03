@@ -26,7 +26,6 @@ import ConnCard from '@renderer/components/sider/conn-card'
 import LogCard from '@renderer/components/sider/log-card'
 import MihomoCoreCard from '@renderer/components/sider/mihomo-core-card'
 import ResourceCard from '@renderer/components/sider/resource-card'
-import UpdaterButton from '@renderer/components/updater/updater-button'
 import { useAppConfig } from '@renderer/hooks/use-app-config'
 import { applyTheme, setNativeTheme, setTitleBarOverlay } from '@renderer/utils/ipc'
 import { platform } from '@renderer/utils/init'
@@ -381,7 +380,6 @@ const App: React.FC = () => {
             {platform !== 'darwin' && (
               <MihomoIcon className="h-[32px] leading-[32px] text-lg mx-[1px]" />
             )}
-            <UpdaterButton iconOnly={true} />
           </div>
           <div className="h-[calc(100%-110px)] overflow-y-auto no-scrollbar">
             <div className="h-full w-full flex flex-col gap-2">
@@ -420,7 +418,6 @@ const App: React.FC = () => {
                 <MihomoIcon className="h-[32px] leading-[32px] text-lg mx-[1px]" />
                 <h3 className="text-lg font-bold leading-[32px]">ihomo Party</h3>
               </div>
-              <UpdaterButton />
               <Button
                 size="sm"
                 className="app-nodrag"
