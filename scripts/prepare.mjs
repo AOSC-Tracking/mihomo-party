@@ -27,7 +27,8 @@ const MIHOMO_ALPHA_MAP = {
   'darwin-x64': 'mihomo-darwin-amd64-compatible',
   'darwin-arm64': 'mihomo-darwin-arm64',
   'linux-x64': 'mihomo-linux-amd64-compatible',
-  'linux-arm64': 'mihomo-linux-arm64'
+  'linux-arm64': 'mihomo-linux-arm64',
+  'linux-loong64':'mihomo-linux-loong64-abi2'
 }
 
 // Fetch the latest alpha release version from the version.txt file
@@ -58,7 +59,8 @@ const MIHOMO_MAP = {
   'darwin-x64': 'mihomo-darwin-amd64-compatible',
   'darwin-arm64': 'mihomo-darwin-arm64',
   'linux-x64': 'mihomo-linux-amd64-compatible',
-  'linux-arm64': 'mihomo-linux-arm64'
+  'linux-arm64': 'mihomo-linux-arm64',
+  'linux-loong64':'mihomo-linux-loong64-abi2'
 }
 
 // Fetch the latest release version from the version.txt file
