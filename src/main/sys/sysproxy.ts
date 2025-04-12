@@ -1,4 +1,4 @@
-import { triggerAutoProxy, triggerManualProxy } from '@mihomo-party/sysproxy'
+import { triggerAutoProxy, triggerManualProxy } from '@mihomo-party-loongarch64/sysproxy'
 import { getAppConfig, getControledMihomoConfig } from '../config'
 import { pacPort, startPacServer, stopPacServer } from '../resolve/server'
 import { promisify } from 'util'
