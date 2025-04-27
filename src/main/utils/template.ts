@@ -11,7 +11,6 @@ export const defaultConfig: IAppConfig = {
   useSubStore: true,
   proxyDisplayMode: 'simple',
   proxyDisplayOrder: 'default',
-  autoCheckUpdate: true,
   autoCloseConnection: true,
   useNameserverPolicy: false,
   controlDns: true,
